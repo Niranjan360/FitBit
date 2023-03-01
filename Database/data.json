@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "dummy",
+      "email": "dummy",
+      "password": "dummy",
+      "age": "dummy",
+      "gender": "dummy"
+    },
+    {
+      "username": "niranjan",
+      "email": "niranjan@gmail.com",
+      "password": "niru2023",
+      "age": "25",
+      "gender": "male",
+      "id": 2
+    }
+  ],
+  "trainers": [
+    {
+      "id": 1,
+      "username": "dummy",
+      "email": "dummy",
+      "password": "dummy",
+      "age": "dummy",
+      "gender": "dummy"
+    },
+    {
+      "username": "niranjan",
+      "email": "niranjan@gmail.com",
+      "password": "niru2023",
+      "age": "26",
+      "gender": "male",
+      "id": 2
+    },
+    {
+      "username": "karthik",
+      "email": "btk@gmail.com",
+      "password": "btk@123",
+      "age": "26",
+      "gender": "male",
+      "id": 3
+    }
+  ],
+  "workouts": []
+}
