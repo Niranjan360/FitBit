@@ -14,9 +14,11 @@ export default function Signup() {
 
     let handleSubmit = (e)=>{
         e.preventDefault();
-        let newuser = {username , email , password , age , gender};
+        let newuser = {username , email , password , age , gender , registerdOn : new Date().toString() };
         let reqURL = user==="trainer" ? "http://localhost:4000/trainers" : "http://localhost:4000/users";
+
         let config = { method : "POST" , headers : {"Content-Type":"application/json"} , body : JSON.stringify(newuser)};
+
         fetch( reqURL , config )
         .then(()=>{alert("Registered sucessfully")
         navigate("/login"); 
@@ -33,11 +35,18 @@ export default function Signup() {
                     <input type="password" placeholder='Password' value={password} onChange={(e)=>{setPassword(e.target.value)}} required/>
                     <input type="text" placeholder='Confirm password' value={confirmPassword} onChange={(e)=>{setConfirmPassword(e.target.value)}} required/>
                     <input type="number" placeholder='Age' value={age} onChange={(e)=>{setAge(e.target.value)}} min="18" max="99" required/>
+
+                    <fieldset>
+                        <legend align="center">Profile picture</legend>
+                        <input type="file" />
+                    </fieldset>
+                    
                     <fieldset>
                         <legend align="center">Gender</legend>
                         <label htmlFor='male'><input type="radio" id='male' name='gender' onClick={()=>{setGender("male")}}/> Male</label>
                         <label htmlFor='female'><input type="radio" id="female" name='gender' onClick={()=>{setGender("female")}}/> Female</label>
                     </fieldset>
+
                     <fieldset>
                         <legend align="center">Signup as</legend>
                         <label htmlFor='user'><input type="radio" id='user' name='kind'  onClick={()=>{setUser("user")}}/> User</label>

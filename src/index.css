@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
 *{
   margin: 0px;
   padding: 0px;
@@ -120,6 +120,10 @@ nav{
   position: sticky;
   top: 0px;
 }
+nav a{
+  text-decoration: none;
+  color:black;
+}
 #logo{
   font-size: 20px;
   font-weight: 600;
@@ -145,7 +149,7 @@ nav{
 .nav-links a:hover{
   color: black;
 }
-nav>button{
+nav>button {
   background-color:#f7de1ec5;
   font-size: 15px;
   font-weight: 600;
@@ -160,7 +164,13 @@ nav>button:hover{
   color: #F7DF1E;
   transition: 0.3s;
 }
+nav .dropdown_menu{
+    display: none;
+}
 
+.dashboard{
+  background-color: white;
+}
 .main section:first-child{
   background: url(./images/gymbg.jpg);
   background-repeat: no-repeat;
@@ -205,7 +215,7 @@ nav>button:hover{
 }
 .card-info{
   width: 100%;
-  height: 300px;
+  height: auto;
   margin: 20px auto;
   display: flex;
   justify-content: space-evenly;
@@ -236,4 +246,187 @@ nav>button:hover{
   font-weight: normal;
   margin: 5px auto;
   color: #373B61;
+}
+
+
+.fitness-form{
+  text-align: center;
+  background-color: white;
+  max-width:500px;
+  margin: 10px auto;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.205);
+}
+.fitness-form h2{
+  letter-spacing: 3px;
+  font-weight:bold;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 2px 2px 0px #ffe413;
+  margin-bottom: 20px;
+}
+.fitness-form form{
+  background-color: #f5f6f6;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom:15px ;
+}
+.fitness-form form input{
+  width: 250px;
+  margin: 10px auto;
+}
+.fitness-form form select{
+  font-size: 18px;
+  width: 300px;
+  height: 30px;
+  margin: 10px auto;
+  border: solid 1px #F7DF1E;
+  border-radius: 5px;
+}
+.loader{
+  width: 100px;
+  margin: 20px auto;
+}
+.fitness-form~h2{
+  text-align: center;
+}
+.bmr{
+  text-align: center;
+}
+.bmr button{
+  background-color:#f7de1ec5;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  border: solid 1px rgba(0, 0, 0, 0.808);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.userdetails{
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+}
+.userdetails div:first-child{
+  background-color: antiquewhite;
+  width: 500px;
+  height: 500px;
+  padding: 10px;
+  border-radius: 14px;
+}
+.userdetails div:first-child h1{
+  margin: 10px auto;
+}
+.userdetails div:first-child h3{
+  margin: 10px auto;
+}
+.userdetails div:last-child{
+  width: 400px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userdetails div img{
+  width: 60%;
+  height: 90%;
+  border-radius: 14px;
+  transition: 0.5s;
+}
+.workouts-cont{
+  padding: 20px 100px;   
+}
+.boxloader{
+  margin: 50px auto;
+  transform: scale(1.3);
+}
+.workouts{
+  max-width: 900px;
+  margin: 10px auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 250px 250px 250px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.workout{
+  background-color: white;
+  width: 250px;
+  height: auto;
+  padding: 5px;
+  border: solid 0.5px rgb(147, 146, 146);
+  border-radius: 8px;
+}
+.workout img{
+  display: block;
+  margin: auto;
+  width: 230px;
+  height: 250px;
+  border-radius: 8px;
+}
+.workout h2{
+  color: #F7DF1E;
+}
+.workout button{
+  display: block;
+  font-size: 13px;
+  padding: 5px 10px;
+  margin: 5px 0px;
+  border-radius: 5px;
+  border: solid 0.4px gray;
+}
+
+
+
+
+@media (max-width:980px){
+  nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-links , nav>button{
+    display: none;
+  }
+  nav .dropdown_menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+  .hamberger{
+    display: flex;
+    justify-content: right;
+    cursor:pointer;
+  }
+  .menu_links{
+    background-color: rgba(0, 0, 0, 0.216);
+    width: 100px;
+    height: 162px;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.2s;
+    animation: dropmenu 0.2s linear;
+  }
+  @keyframes dropmenu {
+    0%{
+      height: 0px;
+      width: 0px;
+    }    
+    100%{
+      height: 162px;
+      width: 100px;
+    }
+  }
+
+  .card-info{
+    display: flex;
+    flex-direction: column;
+  }
+
 }

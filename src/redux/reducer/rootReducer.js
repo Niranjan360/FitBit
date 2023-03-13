@@ -6,6 +6,7 @@ const rootReducer = (state=initalState  , action)=>
     {
         case "ADD_USER" : return {user : action.payload}
         case "REMOVE_USER" : return {user : action.payload}
+        case "EDIT_USER" : return {user : action.payload}
         default : return state;
     }
 }

@@ -27,8 +27,15 @@ const Login = ({user , addUser}) => {
             {
                 console.log(userdetails);
                 addUser(userdetails);
-                alert("login sucessfull !!")
-                navigate("/");
+                if(userkind==="trainer")
+                {
+                    alert("Trainer login sucessfull !!");
+                    navigate("/trainer");
+                }
+                else{
+                    alert("User login sucessfull !!");
+                    navigate("/");
+                }
             }
         })
     }
