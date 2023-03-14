@@ -10,8 +10,11 @@ import TrainerDashboard from './components/TrainerDashboard';
 import Myworkouts from './components/Myworkouts';
 import Protect from './components/Protect';
 import Trainers from './components/Trainerslist';
+import { useEffect } from 'react';
+
 
 function App() {
+
   return (
     <Router>
         <div className="App">
