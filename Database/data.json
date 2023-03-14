@@ -218,6 +218,36 @@
       "gender": "male",
       "registerdOn": "Thu Mar 02 2023 16:55:07 GMT+0530 (India Standard Time)",
       "id": 2
+    },
+    {
+      "username": "Karthik",
+      "email": "karthik@gmail.com",
+      "password": "karthik@123",
+      "age": "30",
+      "gender": "male",
+      "registerdOn": "Tue Mar 14 2023 16:01:34 GMT+0530 (India Standard Time)",
+      "myWorkouts": [],
+      "id": 3
+    },
+    {
+      "username": "ramya",
+      "email": "ramya@gmail.com",
+      "password": "ramya123",
+      "age": "27",
+      "gender": "female",
+      "registerdOn": "Tue Mar 14 2023 16:02:58 GMT+0530 (India Standard Time)",
+      "myWorkouts": [],
+      "id": 4
+    },
+    {
+      "username": "vibha",
+      "email": "vibha@gmail.com",
+      "password": "vibha123",
+      "age": "29",
+      "gender": "female",
+      "registerdOn": "Tue Mar 14 2023 16:03:28 GMT+0530 (India Standard Time)",
+      "myWorkouts": [],
+      "id": 5
     }
   ],
   "workouts": [
