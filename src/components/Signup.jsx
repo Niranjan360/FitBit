@@ -14,7 +14,7 @@ export default function Signup() {
 
     let handleSubmit = (e)=>{
         e.preventDefault();
-        let newuser = {username , email , password , age , gender , registerdOn : new Date().toString() };
+        let newuser = {username , email , password , age , gender , registerdOn : new Date().toString() , myWorkouts : [] };
         let reqURL = user==="trainer" ? "http://localhost:4000/trainers" : "http://localhost:4000/users";
 
         let config = { method : "POST" , headers : {"Content-Type":"application/json"} , body : JSON.stringify(newuser)};

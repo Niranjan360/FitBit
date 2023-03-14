@@ -9,6 +9,7 @@ import Profile from './components/Profile';
 import TrainerDashboard from './components/TrainerDashboard';
 import Myworkouts from './components/Myworkouts';
 import Protect from './components/Protect';
+import Trainers from './components/Trainerslist';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           <Route path='/fitcheck' element={<Protect children={<Fitness/>}/>}/>
           <Route path='/profile' element={<Protect children={<Profile/>}/>}/>
           <Route path='/myworks' element={<Protect children={<Myworkouts/>}/>}/>
-
+          <Route path='/trainers' element={<Protect children={<Trainers/>}/>}/>
         </Routes>
       </div>
     </Router>

@@ -21,7 +21,7 @@ const Navbar = ({user , removeUser}) => {
             </Link>
 
             <div className="nav-links">
-                <Link>Trainers</Link>
+                <Link to="/trainers">Trainers</Link>
                 <Link to="/workouts">Workouts</Link>
                 <Link to="/myworks">My Workouts</Link>
                 <Link to="/fitcheck">Fitness calculator</Link>
@@ -36,7 +36,7 @@ const Navbar = ({user , removeUser}) => {
                         <i class='bx bx-menu-alt-right' ></i>}
                 </div>
                 {menu && <div className="menu_links">
-                    <Link>Trainers</Link>
+                    <Link to="/trainers">Trainers</Link>
                     <Link to="/workouts">Workouts</Link>
                     <Link to="/myworks">My Workouts</Link>
                     <Link to="/fitcheck">Fitness calculator</Link>

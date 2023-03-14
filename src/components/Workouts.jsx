@@ -13,7 +13,14 @@ const Workouts = ({user , editUser}) => {
             fetch("http://localhost:4000/workouts")
             .then((res)=>{return res.json()})
             .then((data)=>{setWorkouts(data)
-                setWorkoutsID(user.myWorkouts.map((w)=>{return w.id}));
+                if(user.myWorkouts)
+                {
+                    setWorkoutsID(user.myWorkouts.map((w)=>{return w.id}));
+                }
+                else
+                {
+                    setWorkoutsID([]);
+                }
             })
         } , 2000)
     } , [])
@@ -63,7 +70,7 @@ const Workouts = ({user , editUser}) => {
         {!workouts && <ClimbingBoxLoader className="boxloader" color="#F7DF1E" />}
         {workouts && <div className="workouts">
                         {
-                            workouts.map((workout)=>{  console.log(workoutsID.includes(workout.id));
+                            workouts.map((workout)=>{
                                 return(
                                 <div className="workout" key={workout.id}>
                                     <img src={workout.referalIMG} alt="refrl" />
